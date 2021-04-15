@@ -2,21 +2,20 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Sidebar from "../Sidebar/Sidebar";
-import "./AddService.css";
 
-const AddService = () => {
-  const [imgURL, setImgURL] = useState(null);
+const Review = () => {
   const { register, handleSubmit } = useForm();
+  const [imgURL, setImgURL] = useState(null);
 
   // submit form
   const onSubmit = (data) => {
     const serviceData = {
-      serviceName: data.serviceName,
+      name: data.name,
+      designation: data.designation,
       description: data.description,
-      fee: data.fee,
       imgURL: imgURL,
     };
-    const url = `http://localhost:9090/addService`;
+    const url = `http://localhost:9090/addReviews`;
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -55,17 +54,31 @@ const AddService = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="row">
                 <div className="col-md-6">
-                  <label htmlFor="">Service Title</label>
+                  <label htmlFor="">Name</label>
                   <input
-                    name="serviceName"
+                    name="name"
                     className="form-control mt-3"
                     type="text"
-                    placeholder="Enter Name"
+                    placeholder="Your Name"
                     ref={register}
                   />
                 </div>
                 <div className="col-md-6">
-                  <label htmlFor="">Service Description</label>
+                  <label htmlFor="">Designation</label>
+                  <input
+                    name="designation"
+                    className="form-control mt-3"
+                    type="text"
+                    placeholder="Company's name Designation"
+                    ref={register}
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-6">
+                  <label className="mt-3" htmlFor="">
+                    Description
+                  </label>
                   <textarea
                     name="description"
                     placeholder="Enter Description"
@@ -73,22 +86,6 @@ const AddService = () => {
                     class="form-control mt-3"
                     rows="3"
                   ></textarea>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-6">
-                  <label className="mt-3" htmlFor="">
-                    Service Fee
-                  </label>
-                  <input
-                    name="fee"
-                    className="form-control mt-3"
-                    type="text"
-                    placeholder="Enter Service Fee"
-                    ref={register}
-                  />
-                </div>
-                <div className="col-md-6">
                   <label className="mt-3" htmlFor="">
                     Upload Image
                   </label>
@@ -114,4 +111,4 @@ const AddService = () => {
   );
 };
 
-export default AddService;
+export default Review;

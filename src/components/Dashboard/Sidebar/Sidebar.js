@@ -10,7 +10,7 @@ const Sidebar = () => {
     >
       <ul className="list-unstyled">
         <li>
-          <Link to="/dashboard" className="text-white">
+          <Link to="/admin" className="text-white">
             <span>Dashboard</span>
           </Link>
         </li>
@@ -38,6 +38,21 @@ const Sidebar = () => {
           <li>
             <Link to="/manageServices" className="text-white">
               <span>Manage Services</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/book" className="text-white">
+              <span>Book</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/bookingList" className="text-white">
+              <span>Booking List</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/review" className="text-white">
+              <span>Review</span>
             </Link>
           </li>
         </div>
