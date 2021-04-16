@@ -16,7 +16,7 @@ const AddService = () => {
       fee: data.fee,
       imgURL: imgURL,
     };
-    const url = `http://localhost:9090/addService`;
+    const url = `https://radiant-coast-42824.herokuapp.com/addService`;
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

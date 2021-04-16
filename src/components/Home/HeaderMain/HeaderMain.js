@@ -1,22 +1,70 @@
 import React from "react";
-import LogisticImg from "../../../images/logistic.jpg";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import Ship1 from "../../../images/ship1.jpg";
+import Ship2 from "../../../images/ship2.jpg";
+import Ship3 from "../../../images/ship3.jpg";
 
 const HeaderMain = () => {
   return (
-    <main className="row d-flex align-items-center">
-      <div className="col-md-4 col-sm-6 col-12 offset-md-1">
-        <h1 className="" style={{ color: "#3A4256" }}>
-          We Care your Products!
-        </h1>
-        <p className="text-secondary">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
-          eveniet necessitatibus et iusto corrupti minima.
-        </p>
+    <div
+      id="carouselExampleIndicators"
+      className="carousel slide"
+      data-ride="carousel"
+    >
+      <ol className="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          className="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div className="carousel-inner">
+        <div className="carousel-item active">
+          <img
+            style={{ height: "500px" }}
+            src={Ship1}
+            className="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div className="carousel-item">
+          <img
+            style={{ height: "500px" }}
+            src={Ship2}
+            className="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div className="carousel-item">
+          <img
+            style={{ height: "500px" }}
+            src={Ship3}
+            className="d-block w-100"
+            alt="..."
+          />
+        </div>
       </div>
-      <div className="col-md-6 col-sm-6 col-12">
-        <img src={LogisticImg} alt="" className="img-fluid" />
-      </div>
-    </main>
+      <a
+        className="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="sr-only">Previous</span>
+      </a>
+      <a
+        className="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="sr-only">Next</span>
+      </a>
+    </div>
   );
 };
 

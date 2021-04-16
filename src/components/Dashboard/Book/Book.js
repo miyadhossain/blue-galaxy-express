@@ -18,7 +18,7 @@ const Book = () => {
   const [book, setBook] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:9090/book/" + id)
+    fetch("https://radiant-coast-42824.herokuapp.com/book/" + id)
       .then((res) => res.json())
       .then((data) => setBook(data));
   }, [id]);
@@ -31,7 +31,7 @@ const Book = () => {
       paymentId,
       orderTime: new Date(),
     };
-    fetch("http://localhost:9090/addBookings", {
+    fetch("https://radiant-coast-42824.herokuapp.com/addBookings", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(bookingDetails),

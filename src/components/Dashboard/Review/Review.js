@@ -15,7 +15,7 @@ const Review = () => {
       description: data.description,
       imgURL: imgURL,
     };
-    const url = `http://localhost:9090/addReviews`;
+    const url = `https://radiant-coast-42824.herokuapp.com/addReviews`;
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

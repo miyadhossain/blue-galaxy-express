@@ -6,7 +6,10 @@ const BookingShortList = ({ bookings }) => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:9090/bookings?email=" + loggedInUser.email)
+    fetch(
+      "https://radiant-coast-42824.herokuapp.com/bookingsByEmail?email=" +
+        loggedInUser.email
+    )
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [loggedInUser.email]);

@@ -4,6 +4,7 @@ import React, { useContext, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation } from "react-router-dom";
 import { UserContext } from "../../../App";
+import Navbar from "../../Shared/Navbar/Navbar";
 import firebaseConfig from "./firebase.config";
 import "./Login.css";
 !firebase.apps.length && firebase.initializeApp(firebaseConfig);
@@ -104,6 +105,7 @@ const Login = () => {
         const signInedUser = { name: displayName, email, success: true };
         setUser(signInedUser);
         setLoggedInUser(signInedUser);
+        storeAuthToken();
         history.replace(from);
       })
       .catch((error) => {
@@ -134,9 +136,22 @@ const Login = () => {
         setUser(newUserInfo);
       });
   };
+  const storeAuthToken = () => {
+    firebase
+      .auth()
+      .currentUser.getIdToken(/* forceRefresh */ true)
+      .then(function (idToken) {
+        sessionStorage.setItem("token", idToken);
+        history.replace(from);
+      })
+      .catch(function (error) {
+        // Handle error
+      });
+  };
 
   return (
     <div className="login">
+      <Navbar></Navbar>
       <form className="formStyle">
         <h3>{newUser ? "Create an account" : "Log in"}</h3>
         {newUser && <label className="labelStyle">Name</label>}
