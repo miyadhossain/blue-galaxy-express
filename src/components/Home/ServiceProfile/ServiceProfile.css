@@ -1,0 +1,12 @@
+.profile_container {
+  background-color: teal;
+  min-height: 200px;
+}
+h6 {
+  font-size: 30px;
+  color: white;
+}
+span {
+  color: white;
+  font-size: 30px;
+}
