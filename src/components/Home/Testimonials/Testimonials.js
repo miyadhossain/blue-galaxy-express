@@ -13,7 +13,7 @@ const Testimonials = () => {
     <section className="testimonials my-5 py-5">
       <div className="container">
         <div className="section-header">
-          <h4 className="text-center">Testimonials</h4>
+          <h2 className="text-center text-info">Testimonials</h2>
         </div>
         <div className="card-deck mt-5">
           {reviews.map((review) => (

@@ -10,7 +10,8 @@ const Services = () => {
   }, []);
   return (
     <div>
-      <div className="container">
+      <div className="container mt-5">
+        <h2 className="text-center text-info">Our Services</h2>
         <div className="row">
           <div className="col-md-12 justify-content-center">
             <div className="row justify-content-center">

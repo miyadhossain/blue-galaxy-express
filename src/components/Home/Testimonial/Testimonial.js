@@ -6,8 +6,8 @@ const Testimonial = ({ review }) => {
     <div className="card shadow-sm">
       <div className="card-body mx-auto">
         <img className="mx-3" src={imgURL} alt="" width="60" />
-        <h6 className="text-primary">{name}</h6>
-        <h5 className="text-primary">{designation}</h5>
+        <h6 className="text-info">{name}</h6>
+        <h5 className="text-info">{designation}</h5>
       </div>
       <div className="card-footer d-flex  align-items-center">
         <div>

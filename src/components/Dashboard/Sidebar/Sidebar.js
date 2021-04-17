@@ -30,29 +30,39 @@ const Sidebar = () => {
       <ul className="list-unstyled">
         <li>
           <Link to="/admin" className="text-white">
-            <span>Dashboard</span>
+            <span>
+              <i class="bi bi-command"></i> Dashboard
+            </span>
           </Link>
         </li>
         <li>
           <Link to="/" className="text-white">
-            <span>Home</span>
+            <span>
+              <i class="bi bi-house"></i> Home
+            </span>
           </Link>
         </li>
         {isAdmin && (
           <div>
             <li>
               <Link to="/orderList" className="text-white">
-                <span>Order List</span>
+                <span>
+                  <i class="bi bi-view-stacked"></i> Order List
+                </span>
               </Link>
             </li>
             <li>
               <Link to="/addService" className="text-white">
-                <span>Add Service</span>
+                <span>
+                  <i class="bi bi-plus-circle"></i> Add Service
+                </span>
               </Link>
             </li>
             <li>
               <Link to="/makeAdmin" className="text-white">
-                <span>Make Admin</span>
+                <span>
+                  <i class="bi bi-people"></i> Make Admin
+                </span>
               </Link>
             </li>
             <li>
@@ -64,23 +74,31 @@ const Sidebar = () => {
         )}
         <li>
           <Link to="/book" className="text-white">
-            <span>Book</span>
+            <span>
+              <i class="bi bi-bag-check"></i> Book
+            </span>
           </Link>
         </li>
         <li>
           <Link to="/bookingList" className="text-white">
-            <span>Booking List</span>
+            <span>
+              <i class="bi bi-view-list"></i> Booking List
+            </span>
           </Link>
         </li>
         <li>
           <Link to="/review" className="text-white">
-            <span>Review</span>
+            <span>
+              <i class="bi bi-chat-right-quote"></i> Review
+            </span>
           </Link>
         </li>
       </ul>
       <div>
         <Link onClick={handleLogOut} to="/" className="text-white">
-          <span>Logout</span>
+          <span>
+            <i class="bi bi-box-arrow-left"></i> Logout
+          </span>
         </Link>
       </div>
     </div>

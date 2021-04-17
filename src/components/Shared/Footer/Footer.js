@@ -65,8 +65,10 @@ const Footer = () => {
             </div>
           </FooterCol>
         </div>
-        <div className="text-center">
-          <p>Copyright {new Date().getFullYear()} All Rights Reserved</p>
+        <div className="text-center ">
+          <p className="text-info">
+            Copyright {new Date().getFullYear()} All Rights Reserved
+          </p>
         </div>
       </div>
     </footer>

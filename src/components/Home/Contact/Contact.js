@@ -6,8 +6,8 @@ const Contact = () => {
     <section className="contact py-5">
       <div className="container">
         <div className="section-header text-center text-white mb-5">
-          <h5 className="text-primary">Contact</h5>
-          <h1>Always connect with us</h1>
+          <h4 className="text-info">Contact</h4>
+          <h5 className="text-info">Always connect with us</h5>
         </div>
         <div className="col-md-9 mx-auto">
           <form action="">
@@ -36,7 +36,7 @@ const Contact = () => {
               ></textarea>
             </div>
             <div className="form-group text-center">
-              <button type="button" className="btn btn-info">
+              <button type="button" className="btn btn-info fw-bold">
                 {" "}
                 Submit{" "}
               </button>

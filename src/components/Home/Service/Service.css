@@ -20,7 +20,6 @@ h3 {
 p {
   font-size: 17px;
   font-weight: 400;
-  line-height: 20px;
   color: #666666;
 }
 .small {
@@ -36,7 +35,7 @@ p {
   overflow: hidden;
   top: 0;
   right: 0;
-  background-color: #00838d;
+  background-color: #31d2f2;
   border-radius: 0 4px 0 32px;
 }
 
@@ -74,7 +73,7 @@ p {
   z-index: -1;
   top: -16px;
   right: -16px;
-  background: #00838d;
+  background: #31d2f2;
   height: 32px;
   width: 32px;
   border-radius: 32px;
