@@ -3,16 +3,25 @@ import "./ServiceProfile.css";
 
 const ServiceProfile = () => {
   return (
-    <div className="">
-      <div className="profile_container row d-flex justify-content-center align-items-center ">
-        <div className="col-md-4">
-          <h3>Experience</h3>
-        </div>
-        <div className="col-md-4">
-          <h3>Cargo</h3>
-        </div>
-        <div className="col-md-4">
-          <h3>Offices</h3>
+    <div className="profile_container">
+      <div class="container ">
+        <div class="row d-flex align-items-center justify-content-center text-center">
+          <div class="col-sm text-white info">
+            <h4>106</h4>
+            <h6>Connected Countries</h6>
+          </div>
+          <div class="col-sm text-white info">
+            <h4 className="info-text">300K+</h4>
+            <h6>Closed Shipment</h6>
+          </div>
+          <div class="col-sm text-white info">
+            <h4>80K+</h4>
+            <h6>Satisfied Clients</h6>
+          </div>
+          <div class="col-sm text-white info">
+            <h4>80K+</h4>
+            <h6>Satisfied Clients</h6>
+          </div>
         </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
 .profile_container {
-  background-color: teal;
+  background-image: url("../../../images/bg.jpg");
   min-height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
 }
-h6 {
-  font-size: 30px;
-  color: white;
-}
-span {
-  color: white;
-  font-size: 30px;
+.info {
+  margin-top: 80px;
+  color: blue;
 }

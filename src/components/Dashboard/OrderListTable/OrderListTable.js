@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 const OrderListTable = ({ orders }) => {
-  const handleStatus = (e) => {
-    console.log(e.target.name);
+  const { register, handleSubmit } = useForm();
+  const [status, setStatus] = useState(null);
+  console.log(status);
+
+  // submit form
+  const onSubmit = (data, id) => {
+    const statusData = {
+      status: status,
+    };
+    console.log(statusData);
+    const url = `http://localhost:9090/update/${id}`;
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(statusData),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+      });
+  };
+
+  const handleStatus = (id) => {
+    console.log(id);
   };
 
   return (
@@ -38,21 +61,22 @@ const OrderListTable = ({ orders }) => {
             <td>{order.bookings.serviceName}</td>
             <td>Credit Card</td>
             <td>
-              <span>
-                <button name="Done" onClick={handleStatus}>
-                  Done
-                </button>
-              </span>
-              <span>
-                <button name="Pending" onClick={handleStatus}>
-                  Pending
-                </button>
-              </span>
-              <span>
-                <button name="On Going" onClick={handleStatus}>
-                  On Going
-                </button>
-              </span>
+              <form onSubmit={handleSubmit(onSubmit, order._id)}>
+                <input
+                  onClick={() => handleStatus(order._id)}
+                  type="submit"
+                  name="pending"
+                  value="pending"
+                  ref={register}
+                />
+                <input
+                  type="button"
+                  name="ongoing"
+                  value="ongoing"
+                  ref={register}
+                />
+                <input type="button" name="done" value="done" ref={register} />
+              </form>
             </td>
           </tr>
         ))}
