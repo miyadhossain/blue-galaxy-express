@@ -56,7 +56,7 @@ const Footer = () => {
           <FooterCol key={3} menuTitle="Industries" menuItems={industries} />
           <FooterCol key={4} menuTitle="Quick Contact" menuItems={ourAddress}>
             <div className="mt-5">
-              <button className="btn btn-info">
+              <button className="myButton">
                 <span className="fs-6 text-dark fw-bold">
                   <i className="bi bi-telephone-outbound-fill"></i>{" "}
                   +100010002000

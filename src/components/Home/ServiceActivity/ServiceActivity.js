@@ -13,7 +13,7 @@ const ServiceActivity = () => {
               <i className="bi bi-cash fs-1"></i>{" "}
               <h5 className="card-title">Trasparent Pricing</h5>
               <h6>We are commited to serve</h6>
-              <button className="btn btn-info">Explore Now</button>
+              <button className="myButton">Explore Now</button>
             </div>
           </div>
         </div>
@@ -23,7 +23,7 @@ const ServiceActivity = () => {
               <i className="bi bi-truck fs-1"></i>{" "}
               <h5 className="card-title">On-Time Delivery</h5>
               <h6>We are commited to serve</h6>
-              <button className="btn btn-info">Explore Now</button>
+              <button className="myButton">Explore Now</button>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@ const ServiceActivity = () => {
               <i className="bi bi-calendar4-range fs-1"></i>{" "}
               <h5 className="card-title">Real Time Tracking</h5>
               <h6>We are commited to serve</h6>
-              <button className="btn btn-info">Explore Now</button>
+              <button className="myButton">Explore Now</button>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ const ServiceActivity = () => {
               <i className="fs-1 bi bi-headset"></i>
               <h5 className="card-title">Online Support</h5>
               <h6>We are commited to serve</h6>
-              <button className="btn btn-info">Explore Now</button>
+              <button className="myButton">Explore Now</button>
             </div>
           </div>
         </div>

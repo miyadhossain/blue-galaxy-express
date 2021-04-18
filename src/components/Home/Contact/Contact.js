@@ -36,7 +36,7 @@ const Contact = () => {
               ></textarea>
             </div>
             <div className="form-group text-center">
-              <button type="button" className="btn btn-info fw-bold">
+              <button type="button" className="myButton fw-bold">
                 {" "}
                 Submit{" "}
               </button>

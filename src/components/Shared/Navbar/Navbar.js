@@ -18,33 +18,57 @@ const Navbar = () => {
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
-          <li className="nav-item active">
-            <Link className="nav-link mr-5" to="/">
+          <li className="nav-item active ">
+            <Link
+              style={{ fontWeight: "600" }}
+              className="nav-link mr-5 text-info"
+              to="/"
+            >
               HOME
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link mr-5" to="/services">
+            <Link
+              style={{ fontWeight: "600" }}
+              className="nav-link mr-5 text-info"
+              to="/services"
+            >
               SERVICES
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link mr-5" to="/projects">
+            <Link
+              style={{ fontWeight: "600" }}
+              className="nav-link mr-5 text-info"
+              to="/projects"
+            >
               PROJECTS
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link mr-5" to="/contact">
+            <Link
+              style={{ fontWeight: "600" }}
+              className="nav-link mr-5 text-info"
+              to="/contact"
+            >
               CONTACT
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link mr-5" to="/admin">
+            <Link
+              style={{ fontWeight: "600" }}
+              className="nav-link mr-5 text-info"
+              to="/admin"
+            >
               ADMIN
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link mr-5" to="/login">
+            <Link
+              style={{ fontWeight: "600" }}
+              className="nav-link mr-5 text-info"
+              to="/login"
+            >
               LOGIN
             </Link>
           </li>

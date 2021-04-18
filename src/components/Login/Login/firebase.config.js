@@ -1,9 +1,9 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyD-Dyy0vCYZms3M78u5DAOYJ1dWfqzvqZ4",
-  authDomain: "burjj-al-aarab.firebaseapp.com",
-  projectId: "burjj-al-aarab",
-  storageBucket: "burjj-al-aarab.appspot.com",
-  messagingSenderId: "251525802976",
-  appId: "1:251525802976:web:b87782b7e92d10f8a01985",
+  apiKey: "AIzaSyBmwTRDm5JRPhW9gnsLMr4gR4d__ZaSm98",
+  authDomain: "blue-galaxy-express.firebaseapp.com",
+  projectId: "blue-galaxy-express",
+  storageBucket: "blue-galaxy-express.appspot.com",
+  messagingSenderId: "593977784536",
+  appId: "1:593977784536:web:0e843753313733a4e2bfad",
 };
 export default firebaseConfig;

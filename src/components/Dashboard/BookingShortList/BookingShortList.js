@@ -20,8 +20,8 @@ const BookingShortList = ({ bookings }) => {
     0
   );
   return (
-    <div>
-      <table className="table table-borderless">
+    <div className="table_container mt-3">
+      <table className="table table-borderless table-hover">
         <thead>
           <tr>
             <th className="text-secondary text-left" scope="col">

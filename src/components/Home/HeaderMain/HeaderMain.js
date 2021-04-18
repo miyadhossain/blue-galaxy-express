@@ -20,8 +20,8 @@ const HeaderMain = () => {
             alt="..."
           />
           <div class="carousel-caption d-md-block justify-content-center align-items-center">
-            <h1>We Care your Dream!</h1>
-            <button className="btn btn-info">Our Service</button>
+            <h1>We are commited to serve you!</h1>
+            <button className="myButton">Our Service</button>
           </div>
         </div>
         <div className="carousel-item">
@@ -33,7 +33,7 @@ const HeaderMain = () => {
           />
           <div class="carousel-caption d-md-block">
             <h1>We Care your Cargo!</h1>
-            <button className="btn btn-info">Our Service</button>
+            <button className="myButton">Our Service</button>
           </div>
         </div>
         <div className="carousel-item">
@@ -44,8 +44,8 @@ const HeaderMain = () => {
             alt="..."
           />
           <div class="carousel-caption d-md-block">
-            <h1>We are commited to serve you!</h1>
-            <button className="btn btn-info">Our Service</button>
+            <h1>We care your Dream!</h1>
+            <button className="myButton">Our Service</button>
           </div>
         </div>
       </div>

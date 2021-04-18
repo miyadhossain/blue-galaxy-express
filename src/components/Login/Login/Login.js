@@ -105,7 +105,6 @@ const Login = () => {
         const signInedUser = { name: displayName, email, success: true };
         setUser(signInedUser);
         setLoggedInUser(signInedUser);
-        storeAuthToken();
         history.replace(from);
       })
       .catch((error) => {
@@ -134,18 +133,6 @@ const Login = () => {
         const newUserInfo = { ...user };
         newUserInfo.error = errorMessage;
         setUser(newUserInfo);
-      });
-  };
-  const storeAuthToken = () => {
-    firebase
-      .auth()
-      .currentUser.getIdToken(/* forceRefresh */ true)
-      .then(function (idToken) {
-        sessionStorage.setItem("token", idToken);
-        history.replace(from);
-      })
-      .catch(function (error) {
-        // Handle error
       });
   };
 
@@ -228,11 +215,8 @@ const Login = () => {
         {user.error}
       </h6>
       <h6 className="text-center">Or</h6>
-      <button
-        onClick={handleGoogleSignIn}
-        className="mx-auto d-block btn button rounded-pill buttonStyle"
-      >
-        Continue with Google
+      <button onClick={handleGoogleSignIn} className="mx-auto d-block myButton">
+        <i className="bi bi-google"></i> Continue with Google
       </button>
     </div>
   );

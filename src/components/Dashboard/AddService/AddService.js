@@ -47,7 +47,7 @@ const AddService = () => {
       <Sidebar></Sidebar>
       <div
         className="col-md-10 p-4 pr-5"
-        style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}
+        style={{ position: "absolute", right: 0, backgroundColor: "#DBE0FE" }}
       >
         <div className="container">
           <h3 className="mt-2">Add Service</h3>
@@ -58,7 +58,7 @@ const AddService = () => {
                   <label htmlFor="">Service Title</label>
                   <input
                     name="serviceName"
-                    className="form-control mt-3"
+                    className="form-control"
                     type="text"
                     placeholder="Enter Name"
                     ref={register}
@@ -70,7 +70,7 @@ const AddService = () => {
                     name="description"
                     placeholder="Enter Description"
                     ref={register}
-                    class="form-control mt-3"
+                    class="form-control"
                     rows="3"
                   ></textarea>
                 </div>
@@ -82,7 +82,7 @@ const AddService = () => {
                   </label>
                   <input
                     name="fee"
-                    className="form-control mt-3"
+                    className="form-control"
                     type="text"
                     placeholder="Enter Service Fee"
                     ref={register}
@@ -93,7 +93,7 @@ const AddService = () => {
                     Upload Image
                   </label>
                   <input
-                    className="form-control mt-3"
+                    className="form-control"
                     type="file"
                     name=""
                     id=""
@@ -102,7 +102,7 @@ const AddService = () => {
                 </div>
               </div>
               <input
-                className="btn saveButton mt-5 float-end"
+                className="myButton mt-5 float-end"
                 type="submit"
                 value="Save"
               />

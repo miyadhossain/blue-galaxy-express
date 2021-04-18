@@ -46,10 +46,10 @@ const Review = () => {
       <Sidebar></Sidebar>
       <div
         className="col-md-10 p-4 pr-5"
-        style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}
+        style={{ position: "absolute", right: 0, backgroundColor: "#DBE0FE" }}
       >
-        <div className="container">
-          <h3 className="mt-2">Add Service</h3>
+        <h3 className="mt-2">Add Service</h3>
+        <div className="container table_container mt-3">
           <div className="mt-3 addBookContainer">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="row">
@@ -57,7 +57,7 @@ const Review = () => {
                   <label htmlFor="">Name</label>
                   <input
                     name="name"
-                    className="form-control mt-3"
+                    className="form-control"
                     type="text"
                     placeholder="Your Name"
                     ref={register}
@@ -67,7 +67,7 @@ const Review = () => {
                   <label htmlFor="">Designation</label>
                   <input
                     name="designation"
-                    className="form-control mt-3"
+                    className="form-control"
                     type="text"
                     placeholder="Company's name Designation"
                     ref={register}
@@ -83,14 +83,14 @@ const Review = () => {
                     name="description"
                     placeholder="Enter Description"
                     ref={register}
-                    class="form-control mt-3"
+                    class="form-control"
                     rows="3"
                   ></textarea>
                   <label className="mt-3" htmlFor="">
                     Upload Image
                   </label>
                   <input
-                    className="form-control mt-3"
+                    className="form-control"
                     type="file"
                     name=""
                     id=""
@@ -99,7 +99,7 @@ const Review = () => {
                 </div>
               </div>
               <input
-                className="btn saveButton mt-5 float-end"
+                className="myButton mt-5 float-end"
                 type="submit"
                 value="Save"
               />

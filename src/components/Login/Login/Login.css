@@ -40,7 +40,7 @@
 
 .buttonStyle[type="submit"],
 .inputStyle[type="submit"] {
-  background: indigo;
+  background-image: linear-gradient(75deg, #7ce1f5, #aee1eb);
   color: white;
   border: none;
   margin-top: 30px;
@@ -51,7 +51,7 @@
 
 .buttonStyle[type="submit"]:hover,
 .inputStyle[type="submit"]:hover {
-  background: #353f53;
+  background-image: linear-gradient(75deg, #7ce1f5, #aee1eb);
 }
 
 .buttonStyle[type="submit"]:active,
@@ -76,7 +76,7 @@
 .buttonStyle[type="button"] {
   display: block;
   appearance: none;
-  background: #333;
+  background-image: linear-gradient(75deg, #7ce1f5, #aee1eb);
   color: white;
   border: none;
   text-transform: uppercase;

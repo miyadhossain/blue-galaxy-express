@@ -93,7 +93,7 @@ const Sidebar = () => {
         )}
       </ul>
 
-      <Link onClick={handleLogOut} to="/" className="text-white">
+      <Link onClick={handleLogOut} to="/home" className="text-white">
         <span>
           <i class="bi bi-box-arrow-left"></i> Logout
         </span>

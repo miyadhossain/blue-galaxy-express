@@ -20,9 +20,10 @@ const BookingList = () => {
       <Sidebar></Sidebar>
       <div
         className="col-md-10 p-4 pr-5"
-        style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}
+        style={{ position: "absolute", right: 0, backgroundColor: "#DBE0FE" }}
       >
         <h5 className="text-brand">Booking List</h5>
+        <h6>Total Bookings: {bookings.length}</h6>
         <BookingCard bookings={bookings} />
       </div>
     </div>

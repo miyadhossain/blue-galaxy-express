@@ -33,11 +33,14 @@ const PaymentCard = ({ handlePayment, book }) => {
   };
   return (
     <div>
-      <form className="form-control" onSubmit={handleSubmit}>
+      <form
+        style={{ width: "50%" }}
+        className="form-control"
+        onSubmit={handleSubmit}
+      >
         <CardElement />
-        <p className="mt-3">Your Service charged will be ${book.fee}</p>
         <button
-          className="mt-5 float-end btn btn-info"
+          className="mt-4 float-end myButton"
           type="submit"
           disabled={!stripe}
         >
@@ -45,9 +48,7 @@ const PaymentCard = ({ handlePayment, book }) => {
         </button>
       </form>
       {paymentError && <p className="text-danger">{paymentError}</p>}
-      {paymentSuccess && (
-        <p className="text-success float-end">Your payment was successful!</p>
-      )}
+      {paymentSuccess && <p className="text-success float-end mt-5"></p>}
     </div>
   );
 };

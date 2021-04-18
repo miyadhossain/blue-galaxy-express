@@ -25,41 +25,47 @@ const ManageServices = () => {
       <Sidebar></Sidebar>
       <div
         className="col-md-10 p-4 pr-5"
-        style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}
+        style={{ position: "absolute", right: 0, backgroundColor: "#DBE0FE" }}
       >
-        <h5 className="text-brand">Manage Services</h5>
+        <h4 className="text-brand">Manage Services</h4>
         <p className="fw-bold">Total Service collection : {services.length}</p>
-        <table className="table table-hover table-borderless mt-3">
-          <thead>
-            <tr className="bookHeading">
-              <th scope="col"></th>
-              <th scope="">Service Name</th>
-              <th scope="">Service Image</th>
-              <th scope="">Service Fee</th>
-              <th scope="">Action</th>
-            </tr>
-          </thead>
-          {services.map((service) => (
-            <tbody key={service._id}>
-              <tr>
-                <th scope="row"></th>
-                <td>{service.serviceName}</td>
-                <td>
-                  <img style={{ width: "30px" }} src={service.imgURL} alt="" />
-                </td>
-                <td>${service.fee}</td>
-                <td>
-                  <button
-                    className="btn btn-info"
-                    onClick={() => handleDelete(service._id)}
-                  >
-                    Delete
-                  </button>
-                </td>
+        <div className="table_container">
+          <table className="table table-hover table-borderless mt-3">
+            <thead>
+              <tr className="bookHeading">
+                <th scope="col"></th>
+                <th scope="">Service Name</th>
+                <th scope="">Service Image</th>
+                <th scope="">Service Fee</th>
+                <th scope="">Action</th>
               </tr>
-            </tbody>
-          ))}
-        </table>
+            </thead>
+            {services.map((service) => (
+              <tbody key={service._id}>
+                <tr>
+                  <th scope="row"></th>
+                  <td>{service.serviceName}</td>
+                  <td>
+                    <img
+                      style={{ width: "50px" }}
+                      src={service.imgURL}
+                      alt=""
+                    />
+                  </td>
+                  <td>${service.fee}</td>
+                  <td>
+                    <button
+                      className="myButton"
+                      onClick={() => handleDelete(service._id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            ))}
+          </table>
+        </div>
       </div>
     </div>
   );

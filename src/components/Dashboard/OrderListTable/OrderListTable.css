@@ -1,0 +1,11 @@
+.table_container {
+  background-color: #f8f8ff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+select {
+  border: 0px;
+  outline: 0px;
+  width: 20px;
+}
