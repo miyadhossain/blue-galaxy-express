@@ -1,31 +1,19 @@
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
+import React from "react";
 
 const OrderListTable = ({ orders }) => {
-  const { register, handleSubmit } = useForm();
-  const [status, setStatus] = useState(null);
-  console.log(status);
-
   // submit form
-  const onSubmit = (data, id) => {
+  const handleSubmit = (id, statusValue) => {
     const statusData = {
-      status: status,
+      id: id,
+      status: statusValue,
     };
-    console.log(statusData);
-    const url = `http://localhost:9090/update/${id}`;
-    fetch(url, {
-      method: "POST",
+    fetch(`http://localhost:9090/update/${id}`, {
+      method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(statusData),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        console.log(result);
-      });
-  };
-
-  const handleStatus = (id) => {
-    console.log(id);
+    }).then((result) => {
+      alert("Updated successfully!");
+    });
   };
 
   return (
@@ -61,21 +49,13 @@ const OrderListTable = ({ orders }) => {
             <td>{order.bookings.serviceName}</td>
             <td>Credit Card</td>
             <td>
-              <form onSubmit={handleSubmit(onSubmit, order._id)}>
-                <input
-                  onClick={() => handleStatus(order._id)}
-                  type="submit"
-                  name="pending"
-                  value="pending"
-                  ref={register}
-                />
-                <input
-                  type="button"
-                  name="ongoing"
-                  value="ongoing"
-                  ref={register}
-                />
-                <input type="button" name="done" value="done" ref={register} />
+              <form onBlur={(e) => handleSubmit(order._id, e.target.value)}>
+                <span>{order.status || "Pending"}</span>
+                <select>
+                  <option value="Done">Done</option>
+                  <option value="On Going">On Going</option>
+                  <option value="Pending">Pending</option>
+                </select>
               </form>
             </td>
           </tr>

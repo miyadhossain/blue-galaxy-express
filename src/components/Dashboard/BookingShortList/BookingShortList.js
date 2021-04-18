@@ -54,7 +54,7 @@ const BookingShortList = ({ bookings }) => {
               </td>
               <td>{book.bookings.serviceName}</td>
               <td>${book.bookings.fee}</td>
-              <td>Pending</td>
+              <td>{book.status || "Pending"}</td>
             </tr>
           ))}
         </tbody>

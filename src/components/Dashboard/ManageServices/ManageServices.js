@@ -49,7 +49,10 @@ const ManageServices = () => {
                 </td>
                 <td>${service.fee}</td>
                 <td>
-                  <button onClick={() => handleDelete(service._id)}>
+                  <button
+                    className="btn btn-info"
+                    onClick={() => handleDelete(service._id)}
+                  >
                     Delete
                   </button>
                 </td>

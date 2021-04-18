@@ -29,20 +29,13 @@ const Sidebar = () => {
     >
       <ul className="list-unstyled">
         <li>
-          <Link to="/admin" className="text-white">
-            <span>
-              <i class="bi bi-command"></i> Dashboard
-            </span>
-          </Link>
-        </li>
-        <li>
           <Link to="/" className="text-white">
             <span>
               <i class="bi bi-house"></i> Home
             </span>
           </Link>
         </li>
-        {isAdmin && (
+        {isAdmin ? (
           <div>
             <li>
               <Link to="/orderList" className="text-white">
@@ -67,40 +60,44 @@ const Sidebar = () => {
             </li>
             <li>
               <Link to="/manageServices" className="text-white">
-                <span>Manage Services</span>
+                <span>
+                  <i class="bi bi-sliders"></i> Manage Services
+                </span>
+              </Link>
+            </li>
+          </div>
+        ) : (
+          <div>
+            <li>
+              <Link to="/book" className="text-white">
+                <span>
+                  <i class="bi bi-bag-check"></i> Book
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/bookingList" className="text-white">
+                <span>
+                  <i class="bi bi-view-list"></i> Booking List
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/review" className="text-white">
+                <span>
+                  <i class="bi bi-chat-right-quote"></i> Review
+                </span>
               </Link>
             </li>
           </div>
         )}
-        <li>
-          <Link to="/book" className="text-white">
-            <span>
-              <i class="bi bi-bag-check"></i> Book
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/bookingList" className="text-white">
-            <span>
-              <i class="bi bi-view-list"></i> Booking List
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/review" className="text-white">
-            <span>
-              <i class="bi bi-chat-right-quote"></i> Review
-            </span>
-          </Link>
-        </li>
       </ul>
-      <div>
-        <Link onClick={handleLogOut} to="/" className="text-white">
-          <span>
-            <i class="bi bi-box-arrow-left"></i> Logout
-          </span>
-        </Link>
-      </div>
+
+      <Link onClick={handleLogOut} to="/" className="text-white">
+        <span>
+          <i class="bi bi-box-arrow-left"></i> Logout
+        </span>
+      </Link>
     </div>
   );
 };
