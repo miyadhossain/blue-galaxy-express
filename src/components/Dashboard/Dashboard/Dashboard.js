@@ -12,7 +12,7 @@ const Dashboard = () => {
           <Sidebar></Sidebar>
         </div>
         <div className="col-md-10 col-sm-12 col-12 d-flex justify-content-center">
-          <h1>Admin Panel!</h1>
+          <h1>Dashboard</h1>
         </div>
       </div>
     </section>

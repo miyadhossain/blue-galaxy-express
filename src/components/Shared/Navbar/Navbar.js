@@ -17,6 +17,10 @@ const Navbar = () => {
       </button>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <Link to="/home" className="navbar-brand heavenNav">
+          <span className="text-info fs-4">Blue-Galaxy</span>
+          <span className="text-danger">-Express</span>
+        </Link>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active ">
             <Link

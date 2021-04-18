@@ -13,6 +13,7 @@ import Review from "./components/Dashboard/Review/Review";
 import Home from "./components/Home/Home/Home";
 import Login from "./components/Login/Login/Login";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
+import NoMatch from "./components/NoMatch/NoMatch";
 export const UserContext = createContext();
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/home">
             <Home></Home>
           </Route>
           <PrivateRoute path="/admin">
@@ -53,6 +57,9 @@ function App() {
           </PrivateRoute>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="*">
+            <NoMatch />
           </Route>
         </Switch>
       </Router>
