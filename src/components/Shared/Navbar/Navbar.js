@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link
               style={{ fontWeight: "600" }}
               className="nav-link mr-5 text-info"
-              to="/services"
+              to="#"
             >
               SERVICES
             </Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
             <Link
               style={{ fontWeight: "600" }}
               className="nav-link mr-5 text-info"
-              to="/projects"
+              to="#"
             >
               PROJECTS
             </Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
             <Link
               style={{ fontWeight: "600" }}
               className="nav-link mr-5 text-info"
-              to="/contact"
+              to="#"
             >
               CONTACT
             </Link>
@@ -69,8 +69,12 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <Link
-              style={{ fontWeight: "600" }}
-              className="nav-link mr-5 text-info"
+              style={{
+                fontWeight: "600",
+                backgroundColor: "#8BE0F5",
+                borderRadius: "5px",
+              }}
+              className="nav-link mr-5 text-white"
               to="/login"
             >
               LOGIN

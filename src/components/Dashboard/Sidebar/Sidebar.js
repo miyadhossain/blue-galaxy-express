@@ -17,11 +17,6 @@ const Sidebar = () => {
       .then((data) => setIsAdmin(data));
   }, [loggedInUser.email]);
 
-  //hanlde logout
-  const handleLogOut = () => {
-    sessionStorage.clear();
-    window.location.reload();
-  };
   return (
     <div
       className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4"
@@ -92,12 +87,6 @@ const Sidebar = () => {
           </div>
         )}
       </ul>
-
-      <Link onClick={handleLogOut} to="/home" className="text-white">
-        <span>
-          <i class="bi bi-box-arrow-left"></i> Logout
-        </span>
-      </Link>
     </div>
   );
 };
