@@ -24,6 +24,6 @@
 
 <!-- Website live link -->
 
-### Live site
+### Live Link
 
 https://blue-galaxy-express.web.app/
