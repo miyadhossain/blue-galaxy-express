@@ -26,6 +26,12 @@
   - Order tracking status
   - Payment integrated with Stripe payment gateway
 
+## Project Link
+
+<!-- Links -->
+
+[Live Site](https://blue-galaxy-express.web.app/)
+
 ## ScreenShot
 
 <!-- imgages -->
@@ -44,9 +50,3 @@
 
   npm start
 ```
-
-## Project Link
-
-<!-- Links -->
-
-[Live Site](https://blue-galaxy-express.web.app/)
